@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <button id="menu-button">☰</button>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">☰</a></li>
+                <li><a href="cadastro.html">☰</a></li>
+                <li><a href="ListarCidade.php">☰</a></li>
+                <!-- Adicione mais itens de menu conforme necessário -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="section">
+        <div class="container">
+            <h2>Formulário de Cadastro</h2>
+            <form action="CadastroCidade.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="SP">SP</option>
+                    <option value="MG">MG</option>
+                    <!-- Adicione todas as opções para os estados brasileiros aqui -->
+                </select>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+</section>
+    <footer id="footer">
+
+    </footer>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.getElementById('menu');
+
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+    <header>
+        <button id="menu-button">☰</button>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">☰</a></li>
+                <li><a href="cadastro.html">☰</a></li>
+                <li><a href="ListarCidade.php">☰</a></li>
+                <!-- Adicione mais itens de menu conforme necessário -->
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.getElementById('menu');
+
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
