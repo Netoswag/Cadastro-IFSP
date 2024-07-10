@@ -11,33 +11,55 @@
         <button id="menu-button">☰</button>
         <nav id="menu">
             <ul>
-                <li><a href="index.html">☰</a></li>
-                <li><a href="cadastro.html">☰</a></li>
-                <li><a href="ListarCidade.php">☰</a></li>
+                <li><a href="index.html"><button id="button-index"></button></a></li>
+                <li><a href="cadastro.html"><button id="button-cadastro"></button></a></li>
+                <li><a href="ListarCidade.php"><button id="button-List"></button></a></li>
                 <!-- Adicione mais itens de menu conforme necessário -->
             </ul>
         </nav>
     </header>
-
+    <main>
         <div class="container">
-            <h2>Formulário de Cadastro</h2>
+            <h2 id="FormCad">Formulário de Cadastro</h2>
             <form action="CadastroCidade.php" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+            <label id="name" for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
                 
-                <label for="estado">Estado:</label>
-                <select id="estado" name="estado">
-                    <option value="SP">SP</option>
-                    <option value="MG">MG</option>
-                    <!-- Adicione todas as opções para os estados brasileiros aqui -->
-                </select>
-                
-                <input type="submit" value="Enviar">
+            <label id="estado-1" for="estado">Estado:</label>
+            <select id="estado" name="estado">
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>      
+        <input id="enviar" type="submit" value="Enviar">
             </form>
         </div>
-
+    </main>
     <footer id="footer">
-
     </footer>
     <script>
         const menuButton = document.getElementById('menu-button');
