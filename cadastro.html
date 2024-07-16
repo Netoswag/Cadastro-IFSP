@@ -1,73 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Cadastro</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Cadastro de Cidade</title>
+    <link rel="stylesheet" href="./css/cadastro.css">
 </head>
 <body>
-    <header>
-        <button id="menu-button">☰</button>
-        <nav id="menu">
-            <ul>
-                <li><a href="index.html"><button id="button-index"></button></a></li>
-                <li><a href="cadastro.html"><button id="button-cadastro"></button></a></li>
-                <li><a href="ListarCidade.php"><button id="button-List"></button></a></li>
-                <!-- Adicione mais itens de menu conforme necessário -->
-            </ul>
-        </nav>
-    </header>
     <main>
         <div class="container">
-            <h2 id="FormCad">Formulário de Cadastro</h2>
-            <form action="CadastroCidade.php" method="post">
-            <label id="name" for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-                
-            <label id="estado-1" for="estado">Estado:</label>
-            <select id="estado" name="estado">
-                <option value="AC">AC</option>
-                <option value="AL">AL</option>
-                <option value="AP">AP</option>
-                <option value="AM">AM</option>
-                <option value="BA">BA</option>
-                <option value="CE">CE</option>
-                <option value="DF">DF</option>
-                <option value="ES">ES</option>
-                <option value="GO">GO</option>
-                <option value="MA">MA</option>
-                <option value="MT">MT</option>
-                <option value="MS">MS</option>
-                <option value="MG">MG</option>
-                <option value="PA">PA</option>
-                <option value="PB">PB</option>
-                <option value="PR">PR</option>
-                <option value="PE">PE</option>
-                <option value="PI">PI</option>
-                <option value="RJ">RJ</option>
-                <option value="RN">RN</option>
-                <option value="RS">RS</option>
-                <option value="RO">RO</option>
-                <option value="RR">RR</option>
-                <option value="SC">SC</option>
-                <option value="SP">SP</option>
-                <option value="SE">SE</option>
-                <option value="TO">TO</option>
-            </select>      
-        <input id="enviar" type="submit" value="Enviar">
-            </form>
+            <fieldset>
+                <legend>Cadastro de Cidade</legend>
+                <form action="CadastroCidade.php" method="post">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select name="estado" id="estado" required>
+                            <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Cadastrar</button>
+                    </div>
+                </form>
+            </fieldset>
+            <button class="btn"><a href="./index.html">Voltar</a></button>
         </div>
     </main>
     <footer id="footer">
     </footer>
-    <script>
-        const menuButton = document.getElementById('menu-button');
-        const menu = document.getElementById('menu');
-
-        menuButton.addEventListener('click', () => {
-            menu.classList.toggle('open');
-        });
-    </script>
 </body>
 </html>

@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Consulta de Cidade</title>
+    <link rel="stylesheet" href="./css/listar.css">
 </head>
 <body>
     <?php
@@ -14,40 +15,28 @@
         $result = mysqli_query($con, $sql);
         //RETORNA apenas uma linha
     ?>
-    <header>
-        <button id="menu-button">☰</button>
-        <nav id="menu">
-            <ul>
-                <li><a href="index.html">☰</a></li>
-                <li><a href="cadastro.html">☰</a></li>
-                <li><a href="ListarCidade.php">☰</a></li>
-                <!-- Adicione mais itens de menu conforme necessário -->
-            </ul>
-        </nav>
-    </header>
-
-    <h1>Consulta de Cidades</h1>
-    <table align="center" border="1" width="500">
+    <div class="container">
+        <h1>Consulta de Cidade</h1>
+        <table align="center" border="1" width="500">
         <tr>
             <th>Código</th>
             <th>Nome</th>
             <th>Estado</th>
+            <th>Alterar</th>
+            <th>Deletar</th>
         </tr>
-        <script>
-        const menuButton = document.getElementById('menu-button');
-        const menu = document.getElementById('menu');
-
-        menuButton.addEventListener('click', () => {
-            menu.classList.toggle('open');
-        });
-    </script>
-        <?php
+            <?php
             while($row = mysqli_fetch_array($result)){
                 echo "<tr>";
                 echo "<td>".$row['id']."</td>";
                 echo "<td>".$row['nome']."</td>";
                 echo "<td>".$row['estado']."</td>";
+                echo "<td><a href='AlteraCidade.php?id=".$row['id']."'>Alterar</a><td>";
+                echo "<td><a href='DeletarCidade.php?id=".$row['id']."'>Deletar</a><td>";
             }
-        ?>
+            ?>
+        </table>
+        <button class="btn"><a href="./index.html">Voltar</a></button>
+    </div>
 </body>
 </html>
