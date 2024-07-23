@@ -1,8 +1,15 @@
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
     background: linear-gradient(to right, #11cbbb, #2575fc);
+}
+header {
+
+}
+main {
     color: #ffffff;
     display: flex;
     justify-content: center;
@@ -16,8 +23,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 110%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 500px;
     text-align: center;
 }
 
@@ -29,8 +36,7 @@ h1 {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
-    background-color: #fff;
+    margin: 40px 0px;
     color: #000;
     border-radius: 10px;
     overflow: hidden;
@@ -45,10 +51,20 @@ th, td {
 th {
     background-color: #11cbbb;
     color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-tr:hover {
+td, tr {
+    background-color: #fff;
+}
+
+td:hover {
     background-color: #f2f2f2;
+    transform: translateY(-3px);
+}
+td a{
+    text-decoration: none;
+    color: inherit;
 }
 
 button {

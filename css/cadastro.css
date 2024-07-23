@@ -1,8 +1,13 @@
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
     background: linear-gradient(to right, #11cbbb, #2575fc);
+}
+
+main{
     color: #ffffff;
     display: flex;
     justify-content: center;
@@ -16,7 +21,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 500px;
+    max-width: 350px;
     text-align: center;
 }
 
@@ -28,7 +33,7 @@ fieldset {
 
 legend {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .form-group {

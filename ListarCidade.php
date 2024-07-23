@@ -15,28 +15,31 @@
         $result = mysqli_query($con, $sql);
         //RETORNA apenas uma linha
     ?>
-    <div class="container">
-        <h1>Consulta de Cidade</h1>
-        <table align="center" border="1" width="500">
-        <tr>
-            <th>Código</th>
-            <th>Nome</th>
-            <th>Estado</th>
-            <th>Alterar</th>
-            <th>Deletar</th>
-        </tr>
-            <?php
-            while($row = mysqli_fetch_array($result)){
-                echo "<tr>";
-                echo "<td>".$row['id']."</td>";
-                echo "<td>".$row['nome']."</td>";
-                echo "<td>".$row['estado']."</td>";
-                echo "<td><a href='AlteraCidade.php?id=".$row['id']."'>Alterar</a><td>";
-                echo "<td><a href='DeletarCidade.php?id=".$row['id']."'>Deletar</a><td>";
-            }
-            ?>
-        </table>
-        <button class="btn"><a href="./index.html">Voltar</a></button>
-    </div>
+    <main>   
+        <div class="container">
+            <h1>Consulta de Cidade</h1>
+            <table align="center" border="0">
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Estado</th>
+                <th>Alterar</th>
+                <th>Deletar</th>
+            </tr>
+                <?php
+                while($row = mysqli_fetch_array($result)){
+                    echo "<tr>";
+                    echo "<td>".$row['id']."</td>";
+                    echo "<td>".$row['nome']."</td>";
+                    echo "<td>".$row['estado']."</td>";
+                    echo "<td><a href='AlteraCidade.php?id=".$row['id']."'>Alterar</a></td>";
+                    echo "<td><a href='DeletarCidade.php?id=".$row['id']."'>Deletar</a></td>";
+                    echo "</tr>";
+                }
+                ?>
+            </table>
+            <button class="btn"><a href="./index.html">Voltar</a></button>
+        </div>
+    </main>
 </body>
 </html>
